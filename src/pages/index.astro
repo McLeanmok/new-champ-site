@@ -1,0 +1,95 @@
+---
+import Container from "../components/container.astro";
+import MainTemplate from "../templates/main-template.astro";
+import Intro from "../components/intro/index.astro";
+import  Butkton from "../components/button.astro"
+
+// images
+import { Image } from "astro:assets";
+import hero from "../media/index/Hero.webp";
+import about from "../media/index/solution.webp"
+
+// loop imports
+import features from "../data/features.json";
+import benefits from "../data/benefits.json"
+import Benefits from "../components/patterns/benefits.astro";
+
+---
+<!-- customize this page to your projects requirements. This is simply a starting point  -->
+<MainTemplate title="ChampCSS | The CSS Framework for Professionals" description="Producing websites that are maintainable, and scalable has never been easier. ChampCSS is a new, innovative tool that easily allows you to build websites that live up to industry standards, follow best practices, and are easy for you and your team to update long-term"
+ keywords={["CSS", "ChampCSS", "web design", "web development", "web production", "CSS framework"]} author="The ChampCSS team">
+ <!-- Hero -->
+	<section class="hero-alpha">
+		<Container customClass="hero-alpha__inner">
+			<Intro 
+				blockName="hero-alpha"
+				marketingHeading="Produce Professional Websites Like a Champion"
+				lede="Producing websites that are maintainable, and scalable has never been easier. ChampCSS is a new, innovative tool that easily allows you to build websites that live up to industry standards, follow best practices, and are easy for you and your team to update long-term."
+				HasButtons
+				buttonOneText="Grab Your Copy"
+				buttonOneHref="/download"
+				situation="hero"
+				alignment="left"
+				hasEyebrow={false}
+			/>
+			<figure class="hero-alpha__media-wrapper">
+				<Image class="hero-alpha__media" alt="A person building a website." title="A person building a website." src={hero} />
+			</figure>
+			</Container>	
+	</section> 
+	<!-- About -->
+	 <section class="home-about">
+		<Container customClass="home-about__inner" smartSpacing>
+			<Intro 
+			theme="light"
+				blockName="home-about"
+				hasEyebrow
+				Eyebrow="about"
+				marketingHeading="The Truth About Most Production Environments"
+				lede="Let’s face the fact that most production tools don’t cut it. They produce bad code output, they don’t make it easy to update sites far into the future, and they seriously outlaw best practices when it comes to web production."
+			/>
+			<div class="home-about__main-content">
+				<div class="home-about__content-wrapper">
+					<h3 class="home-about__headline">This is Where ChampCSS Comes Into Play</h3>
+					<p class="home-about__body">ChampCSS is a tool that makes building professional websites effortless. It ensures that your sites are super maintainable down the road, and it provides you with all sorts of automatic features, which means that you can write less CSS, and focus on tasks that really matter.</p>
+				</div> <!-- end content -->
+				<figure class="home-about__media-wrapper">
+					<Image class="home-about__media" src={about} alt="A woman working on a website design in Figma." title="A woman working on a website design in Figma." />
+				</figure>
+			</div> <!-- end main -->
+			<Butkton text="Learn More About ChampCSS" href="/about" theme="light" />
+		</Container>
+	 </section>
+	 <!-- Features -->
+	  <section class="content-alpha">
+		<Container customClass="content-alpha__inner">
+			<Intro 
+				blockName="content-alpha"
+				hasEyebrow
+				Eyebrow="features"
+				marketingHeading="Revolutionary Features That Will Make Your Life Easier"
+				noLede
+				/>
+				<ul class="content-alpha__feature-list">
+					{
+						features.slice(0,3).map((feat) => (
+							<li>
+								<article class="content-alpha__feature-card">
+									<div class="content-alpha__feature-card-content">
+										<h3 class="content-alpha__feature-title">{feat.title}</h3>
+									<p class="content-alpha__feature-card__body">{feat.descripion}</p>
+									</div>
+
+									<figure class="content-alpha__feature-card__media-wrapper">
+										<img src={feat.img?.href} title={feat.img?.title} alt={feat.img?.alt} class="feature-card__media">
+									</figure>
+								</article>
+							</li>
+						))
+					}
+				</ul>
+		</Container>
+	  </section>
+	  <!-- Benefits -->
+	  <Benefits />
+</MainTemplate>

@@ -1,0 +1,5 @@
+/* This is the bundler file for the patterns directory */
+
+@import url(hero-alpha.css);
+@import url(content-delta.css);
+@import url(benefits.css)

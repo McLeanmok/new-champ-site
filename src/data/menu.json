@@ -1,0 +1,28 @@
+[
+    
+    {
+        "text": "Home",
+        "url": "/",
+        "title": "Go to the home page "
+    },
+    {
+        "text": "About",
+        "url": "/about",
+        "title": "Learn more about ChampCSS"
+    },
+    {
+        "text": "Features",
+        "url": "/features",
+        "title": "Learn more about ChampCSS features"
+    },
+    {
+        "text": "Contact",
+        "url": "/contact",
+        "title": "Get in touch with us"
+    },
+    {
+        "text": "Contact",
+        "url": "/download",
+        "title": "Get Your Copy of ChampCSS"
+    }
+]

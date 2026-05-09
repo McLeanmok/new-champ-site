@@ -1,0 +1,62 @@
+
+@import url(../../css/custom.css);
+@layer champ-intro {
+  /* This file contains all the styling content for the intro block */
+[class$="__intro"] {
+  display: grid;
+  --intro-gap: calc(var(--content-gap) / 2);
+  gap: var(--intro-gap);
+}
+
+[class$="-intro__eyebrow"] {
+  font-size: var(--fs-p);
+  line-height: var(--lh-body);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-sm);
+}
+[class$="-intro__marketing-heading"] {
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-headinsgs);
+
+  /* Switching font s
+  izes */
+  &[data-size="content-section"] {
+    font-size: var(--fs-h2);
+  line-height: var(--lh-headinsgs);
+
+  }
+  &[data-size="hero"] {
+    font-size: var(--fs-h1);
+  line-height: var(--lh-headinsgs);
+  }
+}
+[class$="-intro__lede"] {
+}
+
+/* Alignments */
+[data-intro-alignment="center"] {
+  @media (width > 740px) {
+    margin: auto 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+[data-intro-alignment="right"] {
+  @media (width > 740px) {
+    text-align: right;
+    align-items: right;
+    justify-content: right;
+  }
+}
+
+/* themes */
+[data-intro-theme="light"] {
+  color: var(--white);
+}
+}

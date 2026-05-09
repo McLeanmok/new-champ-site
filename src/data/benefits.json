@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Clean Code",
+        "description": "Since ChampCSS is a variable-first tool, you don’t need to worry about dirty code. You can keep your sites lightweight, and performance, just as it should be"
+    },
+    {
+        "title" : "Produce Sites Quicker",
+        "description" : "With features like CSS variables and utility classes already in place, you are able to get sites produced really fast, and they will, of course, be up to par." 
+    },
+    {
+        "title": "Industry Standards Already Met",
+        "description": "ChampCSS is built upon best practices, and standards. When you use it in your projects, they will be following these best practices."
+    }
+]

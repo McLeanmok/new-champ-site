@@ -1,0 +1,28 @@
+/* styles for the home page */
+/* about */
+.home-about {
+    background-color: var(--secondary-dark);
+    color: var(--white);
+}
+.home-about__inner {
+    gap: var(--container-gap);
+
+    .btn-light {
+        @media (width > 730px) {
+            margin: auto;
+        }
+    }
+}
+.home-about-intro__marketing-heading {
+    max-inline-size: var(--text-width-sm);
+}
+.home-about__main-content {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: var(--grid-2);
+    align-items: center;
+}
+.home-about__content-wrapper {
+    display: grid;
+    gap: var(--content-gap);
+}

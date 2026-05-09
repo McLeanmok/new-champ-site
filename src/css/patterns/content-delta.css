@@ -1,0 +1,39 @@
+.content-alpha {
+    background: var(--tertiary-ultra-light);
+}
+
+/* List */
+.content-alpha__feature-list {
+    display: grid;
+    gap: var(--content-gap);
+}
+
+/* card */
+.content-alpha__feature-card {
+    display: grid;
+    gap: var(--grid-gap);
+
+
+    &:nth-child(even) {
+        border: 5px solid red;
+    }
+    :has(&) {
+        container-type: inline-size;
+    }
+    @container (inline-size >= 800px) {
+        grid-template-columns: var(--grid-2-static);
+        align-items: center;
+    }
+}
+
+.content-alpha__feature-card-content {
+    display: grid;
+    gap: var(--content-gap);
+}
+
+.content-alpha__feature-list li:nth-child(even) .content-alpha__feature-card-content {
+    
+    @media (width > 800px) {
+        order: 1;
+    }
+}

@@ -1,0 +1,8 @@
+.benefits__list {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: var(--grid-3);
+}
+.benefits-intro__marketing-heading {
+    max-inline-size: var(--text-width-sm);
+}

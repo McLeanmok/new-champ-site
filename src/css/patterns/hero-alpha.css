@@ -1,0 +1,11 @@
+/* This document is responsible for styling hero-alpha */
+
+.hero-alpha__inner {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: var(--grid-2);
+}
+.hero-alpha__intro {
+  --intro-gap: calc(var(--content-gap) * 1.1);
+  max-inline-size: 48ch;
+}

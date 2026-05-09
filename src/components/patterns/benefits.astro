@@ -1,0 +1,31 @@
+---
+import Container from "../container.astro";
+import Intro from "../intro/index.astro";
+import benefits from "../../data/benefits.json";
+---
+
+<section class="benefits">
+    <Container customClass="benefits__inner" smartSpacing>
+        <Intro
+            blockName="benefits"
+            hasEyebrow
+            Eyebrow="benefits"
+            marketingHeading="The Benefits That Will Elevate Your Production Process"
+            lede="Discover the powerful features of ChampCSS. Once you discover the unprecedented power of this framework, you will be waiting to implement it on every single site you build."
+
+        />
+
+        <ul class="benefits__list">
+        {
+            benefits.map((b) => (
+                <li>
+                    <article class="benefit-card">
+                        <h3 class="benefit-card__title">{b.title}</h3>
+                        <p class="benefit-card__body">{b.description}</p>
+                    </article>
+                </li>
+            ))
+        }
+        </ul>
+    </Container>
+</section>

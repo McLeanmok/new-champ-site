@@ -1,0 +1,41 @@
+[
+    {
+        "title": "A Varible-First Workflow",
+        "descripion":"ChampCSS doesn't care about what your HTML looks like. Say goodbye to useless class names that clog up your markup. Use custom class names, and hook into ChampCSS via the extensive library of variables.",
+        "img": {
+            "href": "/loop-media/features/varibles.jpg",
+            "alt": "Some css variables inside of a text editor",
+            "title": "Some css variables inside of a text editor"
+        }
+    },
+    {
+        "title": "Extensive Color Management",
+        "descripion": "With a partial approach, editing and manipulating colours across the website is a breeze. Just update your values, and it is going to update all the built-in variations of the colour.",
+        "img": {
+            "href":"/loop-media/features/color.webp",
+            "alt": "A person working on organizing colours",
+            "title": "A person working on organizing colours"
+        }
+    },
+    {
+        "title": "Fluid Type and Spacing",
+        "descripion": "With fluid type and spacing features, you are instantly able to ensure that your content looks good across multiple platforms. This reduces the need for stuff every element into a media query, and leaves more time for you to do more important things.",
+        "img": {
+            "href":"/loop-media/features/type.jpg",
+            "alt": "Typography on a black chalkboard",
+            "title": "Typography on a black chalkboard"
+        }
+    },
+    {
+        "title":"Grid Support",
+        "descripion": "ChampCSS makes it effortless to integrate CSS grid content into your website production. With 5 pre-defined fluid templates, gap variables, and even some quick utility classes, you are able to build grids with ease."
+    },
+    {
+        "title": "Semantic Varibles",
+        "descripion": "Semantic variables makes it super safe to adjust styling content on your website. Whenever possible, everything is mapped to a logical use case, so you can quickly retheme a site."
+    },
+    {
+        "title": "A Sensible Reset",
+        "descripion":"Creating a reset is a huge pain. It’s hard to know which styles would reset user agent styles. I have taken all guesswork out of the equation, and included a reset stylesheet that’ll work out of the box."
+    }
+]
