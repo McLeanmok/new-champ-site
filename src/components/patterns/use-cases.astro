@@ -1,0 +1,46 @@
+---
+// importing images
+import lab from "../../media//about/lab.jpg"
+import build from "../../media/about/site-build.jpg"
+import { Image } from "astro:assets";
+// importing components
+import Container from "../container.astro";
+import Intro from "../intro/index.astro"
+---
+<section class="use-cases">
+    <Container customClass="use-cases__inner" smartSpacing>
+        <Intro
+        blockName="use-cases"
+        noLede
+        hasEyebrow
+        Eyebrow="Use Cases"
+        marketingHeading="How Would You Use ChampCSS?"
+        />
+
+        <!-- Use Cases list -->
+         <ul class="use-cases__list">
+            <li>
+                <article class="use-case__card">
+                    <div class="use-case__card-content-wrapper">
+                        <h3 class="use-case__card-heading">For Quick Labs</h3>
+                        <p class="use-case__card-body">For times when you are just playing around in a lab environment, and you don’t want to worry about creating a system, you can just plug into ChampCSS, and it will take care of the rest.</p>
+                    </div> <!-- end use case content -->
+                    <figure class="use-case__card-media-wrapper">
+                        <Image src={lab} alt="A Web producer working on a lab, testing out a CSS feature" title="A Web producer working on a lab, testing out a CSS feature" class="use-case__card-media" />
+                    </figure>
+                </article> <!-- end of use case card -->
+            </li> <!-- end of use case -->
+            <li>
+                <article class="use-case__card">
+                    <div class="use-case__card-content">
+                        <h3 class="use-case__card-heading">For Full Website Builds</h3>
+                        <p class="use-case__card-body">When you are building out full websites, ChampCSS is a no-brainer. Everything is already frameworked for you, so you can dive into the web production phase without any delay.</p>
+                    </div> <!-- end use case content -->
+                    <figure class="use-case__card-media-wrapper">
+                        <Image src={build} alt="Someone producing wireframes" title="Someone producing wireframes" class="use-case__card-media" />
+                    </figure>
+                </article> <!-- end of use case card -->
+            </li> <!-- end of use case -->
+         </ul>
+    </Container>
+</section>

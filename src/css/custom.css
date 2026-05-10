@@ -3,7 +3,8 @@
 
     You can override or change anything in ChampCSS from here. You can even do your own frameworking by adding custom variables or utility classes. This document is loaded right above style.css, so anything that you define here will override the defaults.
 */
-[data-smart-spacing] {
+:where([data-smart-spacing]) {
+  --smart-spacing-gap-amount: var(--container-gap);
   display: grid;
   gap: var(--container-gap);
 }

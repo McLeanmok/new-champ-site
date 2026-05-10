@@ -1,0 +1,11 @@
+.hero-delta {
+    --delta-color: var(--secondary-mid);
+    --secondary-overlap-top-bg: var(--white);
+    --secondary-overlap-bottom-bg: var(--delta-color);
+    --secondary-overlap: linear-gradient(to bottom, var(--secondary-overlap-top-bg) 50%, var(--secondary-overlap-bottom-bg) 50%);
+    background: var(--secondary-overlap);
+
+    & + section {
+        background: var(--secondary-mid);
+    }
+}

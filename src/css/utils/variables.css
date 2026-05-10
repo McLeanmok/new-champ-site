@@ -190,7 +190,7 @@
   );
 
   /* Secondary */
-  --secondary-overlap-top-bg: var(--secondary-dark);
+  --secondary-overlap-top-bg: var(--secondary-mid);
   --secondary-overlap-top-percentage: var(--overlap-top-percentage);
   --secondary-overlap-bottom-bg: var(--white);
   --secondary-overlap-bottom-percentage: var(--overlap-bottom-percentage);
@@ -291,7 +291,7 @@
   --gap-sm: clamp(0.5rem, 0.478vw + 0.347rem, 1rem);
   --gap-md: clamp(1.5rem, 0.478vw + 1.347rem, 2rem);
   --gap-lg: clamp(1.5rem, 1.912vw + 0.888rem, 3.5rem);
-  --gap-xl: clamp(2rem, 1.912vw + 1.388rem, 4rem);
+  --gap-xl: clamp(4rem, 1.912vw + 1.388rem, 9rem);
 
   --card-gap: var(--gap-md);
   --grid-gap: var(--gap-lg);

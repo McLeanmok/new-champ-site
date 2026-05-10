@@ -3,12 +3,53 @@ import Container from "../components/container.astro";
 import MainTemplate from "../templates/main-template.astro";
 import Button from "../components/button.astro";
 import Intro from "../components/intro/index.astro";
+import Intro from "../components/intro/index.astro";
+import UseCases from "../components/patterns/use-cases.astro";
+
+// importing images 
+import hero from "../media/about/hero.jpg"
+import solution from "../media/about/solution.jpg"
+import { Image } from "astro:assets";
 ---
- <MainTemplate title="ChampCSS Astro Theme" description="A starter theme for Astro using ChampCSS" author="Major Digital Projects" keywords={["Astro", "ChampCSS", "Starter Theme"]}>
-	<section>
-		<Container >
-			<h1>About</h1>
-			
-			</Container>	
-	</section> 
+ <MainTemplate title="ChampCSS | About" description="ANot convinced? Read more about the mission behind ChampCSS, and what problems that this framework attempts to solve"  keywords={["CSS", "CSS framework", "About", "Problems", "Solutions"]}>
+	<!-- hero -->
+	 <section class="hero-delta">
+		<Container customClass="hero-delta__inner" smartSpacing width="narrow">
+			<Intro 
+				situation="hero"
+				blockName="hero-delta"
+				Eyebrow="About"
+				hasEyebrow
+				marketingHeading="A New CSS Framework That'll Change How You Work"
+				lede="Not convinced? Read more about the mission behind ChampCSS, and what problems that this framework attempts to solve"
+			/>
+			<figure class="hero-delta__media-wrapper">
+				<Image class="hero-delta__media" src={hero} alt="A man at his desk building a website" title="A man at his desk building a website" />
+			</figure>
+		</Container>
+	 </section>
+	 <!-- problem  -->
+	  <section class="before">
+		<Container customClass="before__inner">
+			<Intro 
+				blockName="before"
+				marketingHeading="Life Before ChampCSS"
+				lede="When you start a new website, there is a lot of decisions that need to be made. What typographic setup are you going to use? What padding are you going to use on your sections, how will you be making all this content responsive? What colour palette are you using? How are you going to tokenise it so that it’s useful for you? What about a reset? I have to figure out the exact recipe to nuke out all the browser agent styles. On and on we go. Before you know it, you are spending hours setting up your project before you even start laying out content on a page, and crafting your layouts."
+				theme="light"
+			/>
+		</Container>
+	  </section>
+	  <!-- solution  -->
+	   <section class="solution">
+		<Container customClass="solution__inner">
+			<h2 class="solution__heading">What ChampCSS Solves</h2>
+			<div class="solution__main-content-wrapper">
+				<p class="solution__paragrapgh">With ChampCSS, I have done all the frameworking and tedious setup for you. This means that you are able to dive right into producing your web layouts without the need to configure anything beforehand. If you want to customize the framework, you can easily do that. ChampCSS is built with maintainability and scalability in mind.</p>
+				<figure class="solution__media-wrapper">
+					<Image class="solution__media" src={solution} alt="A woman on a mac computer working on a website" title="A woman on a mac computer working on a website" />
+				</figure>
+			</div> <!-- end main content wrapper -->
+		</Container>
+	   </section>
+	   <UseCases />
 </MainTemplate>

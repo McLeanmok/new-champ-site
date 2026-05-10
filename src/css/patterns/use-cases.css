@@ -1,0 +1,24 @@
+/* This is the file that controls the styling for the use cases pattern */
+/* section styles  */
+.use-cases {
+  background: var(--surface-light);
+}
+.use-cases__inner {
+  --smart-spacing-gap-amount: var(--gap-xl);
+}
+/* list + card styles  */
+.use-cases__list {
+  display: grid;
+  gap: var(--content-gap);
+  grid-template-columns: var(--grid-2);
+}
+.use-case__card {
+    display: grid;
+    gap: calc(var(--card-gap) * 2.5);
+}
+.use-case__card-media {
+    :has(> &) {
+        order: -1;
+    }
+    aspect-ratio: 16/9;
+}
