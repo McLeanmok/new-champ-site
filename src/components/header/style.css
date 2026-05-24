@@ -129,16 +129,16 @@
       background-color: var(--primary-btn-hover-bg);
       color: var(--primary-btn-hover-color);
     }
+    /* Handling the button on desktop + mobile  */
+  @media (width > 730px) {
+    margin-left: var(--site-header-cta-offset);
+  }
+  @media (width < 730px) {
+    --site-header-cta-offset: 3rem;
+    margin-top: var(--site-header-cta-offset);
+  }
   }
 
-  /* Handling the button on desktop + mobile  */
-@media (width > 730px) {
-  margin-left: var(--site-header-cta-offset);
-}
-@media (width < 730px) {
-  --site-header-cta-offset: 3rem;
-  margin-top: var(--site-header-cta-offset);
-}
 }
 /* Mobile styles */
 /* Hiding the checkbox - we don't need it */
