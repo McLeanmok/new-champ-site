@@ -114,7 +114,7 @@
 /* styling the last link like a button - this content will only load if hasCta is true */
 [data-nav-layout="cta"] li:last-child {
   --site-header-cta-offset: 20rem;
-
+  mlmargin-left: var(--site-header-cta-offset);
   /* Button styles */
   a {
     background-color: var(--primary-btn-bg);
@@ -129,14 +129,7 @@
       background-color: var(--primary-btn-hover-bg);
       color: var(--primary-btn-hover-color);
     }
-    /* Handling the button on desktop + mobile  */
-  @media (width > 730px) {
-    margin-left: var(--site-header-cta-offset);
-  }
-  @media (width < 730px) {
-    --site-header-cta-offset: 3rem;
-    margin-top: var(--site-header-cta-offset);
-  }
+    
   }
 
 }
