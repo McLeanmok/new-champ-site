@@ -1,0 +1,29 @@
+/* This file is responsible for styling the benefits-alpha pattern */
+.benefits-alpha__list {
+    display: grid;
+    gap: var(--grid-gap);
+    justify-items: space-between;
+    grid-template-columns: var(--grid-2);
+
+    li:nth-child(1) {
+      @media (width > 810px) {
+        grid-column: 1 /-1
+      }
+    }
+}
+
+.benefits-alpha__card {
+    display: grid;
+    gap: var(--card-gap);
+    background: var(--surface-ultra-light);
+    padding: var(--card-padding);
+    border-radius: var(--card-radius);
+    align-self: stretch;
+}
+.benefits-alpha__card-icon {
+    --icon-bg-color: var(--surface-ultra-dark);
+    color: var(--white);
+}
+.benefits-alpha__card-heading {
+    font-size: var(--fs-h4)
+}

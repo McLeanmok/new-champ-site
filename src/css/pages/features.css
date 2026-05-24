@@ -1,0 +1,18 @@
+/* This is the file that contains styles for the features page */
+.features {
+  background: var(--tertiary-light);
+}
+.features__list {
+  display: grid;
+  gap: var(--grid-gap);
+  @media (width > 650px) {
+    grid-template-columns: var(--grid-2-static);
+  }
+  @media (width > 950px) {
+    grid-template-columns: var(--grid-3-static);
+  }
+}
+
+.feature-card {
+    background: color-mix(in srgb, var(--surface-ultra-light) 40%, transparent);
+}

@@ -86,9 +86,9 @@
     border-radius: var(--card-radius);
   }
   [class$="-card__heading"] {
-    font-size: var(--card__heading-font-size);
+    font-size: var(--card-heading-font-size);
   }
-  [class$="-card__body"] {
+  [class$="-card-body"] {
     font-size: var(--card__body-font-size);
     margin: auto 0;
   }

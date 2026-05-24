@@ -1,11 +1,88 @@
 ---
+// importing icon package 
+import { Icon } from 'astro-icon/components';
+// importing loop
+import features from "../data/features.json";
+import benefits from  "../data/benefits.json"
+// importing components
 import Container from "../components/container.astro";
 import MainTemplate from "../templates/main-template.astro";
 import Button from "../components/button.astro";
 import Intro from "../components/intro/index.astro";
 import UseCases from "../components/patterns/use-cases.astro";
+
+// importing images 
+import hero from "../media/features/hero.jpg"
+import { Image } from "astro:assets";
 ---
-<!-- customize this page to your projects requirements. This is simply a starting point  -->
 <MainTemplate title="ChampCSS Astro Theme" description="A starter theme for Astro using ChampCSS" author="Major Digital Projects" keywords={["Astro", "ChampCSS", "Starter Theme"]}>
+    <!-- Hero -->
+     <section class="hero-alpha">
+		<Container customClass="hero-alpha__inner">
+			<Intro 
+                hasEyebrow
+                Eyebrow="features"
+				blockName="hero-alpha"
+				marketingHeading="Professional Grade Features for Building  Websites"
+				lede="Discover the powerful features of ChampCSS. Once you discover the unprecedented power of this framework, you will be waiting to implement it on every single site you build."
+                alignment="left"
+			/>
+			<figure class="hero-alpha__media-wrapper">
+				<Image class="hero-alpha__media" alt="A person building a website." title="A person building a website." src={hero} />
+			</figure>
+			</Container>	
+	</section> 
+
+	<!-- Features  -->
+	  <section class="features">
+    <Container customClass="features__inner" smartSpacing>
+        <Intro
+            blockName="features"
+            hasEyebrow
+            Eyebrow="features"
+            marketingHeading="The features That Will Elevate Your Production Process"
+            lede="Discover the powerful features of ChampCSS. Once you discover the unprecedented power of this framework, you will be waiting to implement it on every single site you build."
+
+        />
+
+        <ul class="features__list">
+        {
+            features.map((feature) => (
+                <li>
+                    <article class="feature-card">
+                        <h3 class="feature-card__heading">{feature.title}</h3>
+                        <p class="feature-card__body">{feature.descripion}</p>
+                    </article>
+                </li>
+            ))
+        }
+        </ul>
+    </Container>
+</section>
 	<UseCases />
+    <section class="benefits-alpha">
+        <Container customClass="benefits-alpha__inner" smartSpacing>
+            <Intro
+                blockName="benefits-alpha"
+                hasEyebrow
+                Eyebrow="benefits"
+                marketingHeading="The Benefits That Will Elevate Your Production Process"
+                noLede />
+
+            <ul class="benefits-alpha__list">
+                {
+                    benefits.map((b) => (
+                          <li>
+                    <article class="benefits-alpha__card">
+                        <Icon name={b.icon} class="benefits-alpha__card-icon site-icon" />
+                        <h3     class="benefits-alpha__card-heading">{b.title}</h3>
+                        <p class="benefits-alpha__card-body">{b.description}</p>
+                        </article>
+
+                </li>
+                    ))
+                }
+             </ul>
+            </Container>
+    </section>
 </MainTemplate>
