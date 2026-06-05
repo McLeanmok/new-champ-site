@@ -1,0 +1,25 @@
+/* This file is responsible for styling related to the contact page  */
+/* Contact Form */
+.contact__inner {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: var(--grid-2);
+    justify-content: start;
+}
+
+/* contribute */
+.contribute {
+    background: var(--secondary-ultra-dark);
+}
+.contribute__inner {
+    display: grid;
+    gap: calc(var(--content-gap) * 1.5);
+}
+
+.contribute__form {
+    .form-feild {
+        background: var(--surface-dark);
+        color: var(--white);
+        border: 2px solid color-mix(in srgb, var(--white)50%, transparent);
+    }
+}

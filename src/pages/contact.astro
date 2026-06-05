@@ -3,30 +3,69 @@ import Container from "../components/container.astro";
 import MainTemplate from "../templates/main-template.astro";
 import Button from "../components/button.astro";
 import Intro from "../components/intro/index.astro";
+import SiteForm from "../components/site-form.astro";
+import Input from "../components/input.astro";
 ---
 <!-- customize this page to your projects requirements. This is simply a starting point  -->
-<MainTemplate title="ChampCSS Astro Theme" description="A starter theme for Astro using ChampCSS" author="Major Digital Projects" keywords={["Astro", "ChampCSS", "Starter Theme"]}>
-	<section>
-		<Container >
-			<h1>ChampCSS Astro Theme Playground</h1>
-				<Button text="internal Button" theme="primary" href="#" />
-				<Button text="external Button" theme="primary" as="button" />
-
-				<br>
-				<Intro 
-				alignment="center"
-					hasEyebrow
-					Eyebrow="This is the SEO Heading"
-					
-					marketingHeading="This is the marketing heading"
-					lede="This is the lede, a short description of the content that follows. It should be engaging and informative, enticing readers to continue reading."
-					blockName="playground"
-					situation="content-section"
-
-					HasButtons
-					buttonOneText="Learn More"
-					buttonOneHref="#"
+<MainTemplate title="ChampCSS | Contact us" description="Are you ready to take your web production game to the next level? Grab your copy today! It is absolutely free, you don’t even to enter in your email address."  keywords={["CSS", "ChampCSS", "Contact"]}>
+	<section class="hero-hardy">
+		<Container customClass="hero-hardy__inner">	
+				<Intro
+				blockName="hero-hardy"
+				marketingHeading="Get in Touch "
+				lede="Are you ready to take your web production game to the next level? Grab your copy today! It is absolutely free, you don’t even to enter in your email address."
 				/>
 			</Container>	
 	</section> 
+	<!-- contact form -->
+	 <section class="contact">
+		<Container customClass="contact__inner">
+			<Intro 
+				blockName="contact"
+				marketingHeading="Contact Us"
+				lede=" Have any questions about using ChampCSS, and need a little assistance? Fill out the form below, and I will do my best to reply to each and every query."
+				/>
+				<SiteForm />
+		</Container>
+	 </section>
+
+	 <!-- contribution -->
+	  <section class="contribute">
+		<Container customClass="contribute__inner">
+			<Intro
+			blockName="contribute"
+			theme="light"
+			marketingHeading="Contribute to ChampCSS"
+			lede="ChampCSS is intended to be a product driven by community, and input from others. If you run across a bug, or you want to suggest a feature, please feel free to let me know, and I will do my best to take your requests in mind."
+			/>
+
+			<form action="" class="site-form contribute__form">
+				<div class="site-form__input-row">
+					<Input type="text" name="first_name" id="first_name" placeholder="First Name" ariaLabel="Enter your first name"/>
+					<Input type="text" name="last_name" id="last_name" placeholder="Last Name" ariaLabel="Enter your last name"/>
+				</div>  <!-- End input row -->
+				<Input 
+				type="email"
+				name="email_address" id="email_address"
+				placeholder="Email Address"
+				ariaLabel="enter your email address"
+				/>
+				<Input 
+				type="text"
+				name="demo_link"
+				id="demo_link"
+				placeholder="Demo Link"
+				ariaLabel="provide a link to a demo of your feature"
+				/>
+				<Input 
+				type="textarea"
+				name="message"
+				id="message"
+				placeholder="Your Message"
+				ariaLabel="Write your message"
+				/>
+				<Button as="button" text="Make Your Contribution" title="you are about to submit this form" theme="light" />
+			</form>
+		</Container>
+	  </section>
 </MainTemplate>
