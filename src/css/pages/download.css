@@ -1,0 +1,55 @@
+/* steps */
+.steps {
+  background: var(--secondary-ultra-light);
+}
+
+.steps__inner {
+    display: grid;
+    gap: var(--container-gap);
+}
+
+.steps__intro {
+    @media (width > 730px) {
+        text-align: center;
+    }
+}
+/* list styles  */
+.steps__list {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: var(--grid-3);
+  counter-reset: step-counter;
+}
+
+.steps__list li {
+  counter-increment: step-counter;
+}
+
+/* Card styles */
+.steps__list-card {
+  --step-card-gap: var(--card-gap);
+  background: color-mix(in srgb, var(--secondary-light) 30%, var(--white));
+  display: grid;
+  gap: var(--step-card-gap);
+}
+
+/* Heading + number styles */
+.steps__list-card-heading {
+    font-size: var(--fs-h4);
+  /* Pseudo element for numbering  */
+  &::before {
+    display: block;
+    content: counter(step-counter);
+    background-color: var(--secondary-ultra-dark);
+    color: var(--white);
+    padding: var(--sp-150);
+    font-size: var(--fs-p);
+    margin-bottom: var(--step-card-gap);
+    border-radius: 50%;
+    place-self: flex-start;
+  } /* end pseudo element */
+}
+
+.steps__list-card-lede {
+    color: var(--surface-dark);
+}

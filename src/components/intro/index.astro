@@ -15,9 +15,11 @@ interface Props {
     alignment?: "left" | "center" | "right";
     HasButtons?: boolean;
     buttonOneText?: string;
+    buttonOneTitle?: string;
     buttonOneHref?: string;
     hasSecondBtn?: boolean;
     buttonTwoText?: string;
+    buttonTwoTitle?: string;
     buttonTwoHref?: string;
 }
 
@@ -32,9 +34,11 @@ const {
     situation = "content-section",
     HasButtons = false,
     buttonOneText,
+    buttonOneTitle,
     buttonOneHref,
     hasSecondBtn = false,
     buttonTwoText,
+    buttonTwoTitle,
     buttonTwoHref,
     noLede = false
 } = Astro.props;
@@ -57,8 +61,8 @@ const MarketingHeadingTag = hasEyebrow ? "p" : Tag;
     )}
     {HasButtons && (
         <div class={blockName && `${blockName}-intro__buttons`}>
-          <Button text={buttonOneText} href={buttonOneHref} theme="primary" />
-          {hasSecondBtn && <Button text={buttonTwoText} href={buttonTwoHref} theme="secondary" />}
+          <Button text={buttonOneText} href={buttonOneHref} theme="primary" title={buttonOneTitle}/>
+          {hasSecondBtn && <Button text={buttonTwoText} href={buttonTwoHref} theme="secondary" title={buttonTwoTitle}/>}
         </div>
     )}
 </article>

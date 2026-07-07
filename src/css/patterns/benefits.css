@@ -1,3 +1,8 @@
+
+.benefits {
+  background: var(--primary-ultra-dark);
+  color: var(--white);  
+}
 .benefits__list {
   display: grid;
   gap: var(--grid-gap);

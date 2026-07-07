@@ -12,24 +12,18 @@
 
   /* icon styling */
   [data-icon] {
-  color: var(--black);
-  font-size: 3.5rem;
-  z-index: auto !important;
-  position: relative; /* z-index needs this to take effect */
-}
-.site-icon {
-  --icon-padding: var(--sp-100);
-  --icon-bg-color: var(--surface-ultra-light);
-  --icon-radius: var(--radius);
-
-  background: var(--icon-bg-color);
-  padding: var(--icon-padding);
-  border-radius: var(--icon-radius);
-
-  /* variants */
-  @container style(--icon-theme: dark) {
-    color: var(--white);
-    --icon-bg-color: var(--surface-dark);
+    color: var(--black);
+    font-size: 3.5rem;
+    z-index: auto !important;
+    position: relative; /* z-index needs this to take effect */
   }
-}
+  .site-icon {
+    --icon-padding: var(--sp-100);
+    --icon-bg-color: var(--surface-ultra-light);
+    --icon-radius: var(--radius);
+
+    background: var(--icon-bg-color);
+    padding: var(--icon-padding);
+    border-radius: var(--icon-radius);
+  }
 }

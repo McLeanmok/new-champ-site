@@ -1,4 +1,8 @@
-/* This file is responsible for styling the benefits-alpha pattern */
+/* This file is responsible for styling the benefits-alpha pattern 
+*/
+.benefits-alpha {
+    background-color: red;
+}
 .benefits-alpha__list {
     display: grid;
     gap: var(--grid-gap);

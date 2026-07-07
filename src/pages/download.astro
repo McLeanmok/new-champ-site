@@ -4,8 +4,58 @@ import MainTemplate from "../templates/main-template.astro";
 import Button from "../components/button.astro";
 import Intro from "../components/intro/index.astro";
 import UseCases from "../components/patterns/use-cases.astro";
+import Benefits from "../components/patterns/benefits.astro";
+
 ---
 <!-- customize this page to your projects requirements. This is simply a starting point  -->
 <MainTemplate title="ChampCSS Astro Theme" description="A starter theme for Astro using ChampCSS" author="Major Digital Projects" keywords={["Astro", "ChampCSS", "Starter Theme"]}>
+	<!-- hero -->
+	<section class="hero-hardy">
+		<Container customClass="hero-hardy__inner">	
+				<Intro
+				blockName="hero-hardy"
+				marketingHeading="Claim Your Copy of ChampCSS"
+				lede="Are you ready to take your web production game to the next level? Grab your copy today! It is absolutely free, you don’t even to enter in your email address."
+				HasButtons
+				buttonOneText="Download Latest Version."
+				buttonOneTitle="You are about to go to the ChampCSS Github Repo"
+				buttonOneHref="https://github.com/McLeanmok/champcss"
+				/>
+			</Container>	
+		</section>
+
+		<!-- steps -->
+		 <section class="steps">
+			<Container customClass="steps__inner">
+				<div class="steps__intro">
+					<h2 class="steps__headline">Get Started in 3 Simple Steps</h2>
+				</div>
+
+				<!-- List -->
+				<ol class="steps__list">
+					<li>
+						<article class="steps__list-card">
+							<h3 class="steps__list-card-heading">Unzip the Files</h3>
+							<p class="steps__list-card-lede">When you first download the framework, it will be zipped up. Go ahead and unzip the css files, and place them in a new CSS folder.</p>
+						</article>
+					</li> <!-- End List item -->
+					<li>
+						<article class="steps__list-card">
+							<h3 class="steps__list-card-heading">Theme Your Site</h3>
+							<p class="steps__list-card-lede">Go into the utils file in ChampCSS. Here, you are in full control over your site's theme. Once you customize ChampCSS, you are good to go.</p>
+						</article>
+					</li> <!-- End List item -->
+					<li>
+						<article class="steps__list-card">
+							<h3 class="steps__list-card-heading">Produce Your Sites</h3>
+							<p class="steps__list-card-lede">With variables, fluid type and spacing, and utility classes, you are able to build your website projects at lightning speed.</p>
+						</article>
+					</li> <!-- End List item -->
+				</ol>
+			</Container>
+		 </section>
+	<!-- Use cases -->
 	<UseCases />
+	<!-- Benefits  -->
+	 <Benefits />
 </MainTemplate>
